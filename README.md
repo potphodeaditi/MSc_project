@@ -320,7 +320,13 @@ Future research could investigate:
 This repository was developed as part of an **MSc Artificial Intelligence research project at Nottingham Trent University**.
 
 The work combines machine learning, deep learning, audio signal processing, and application development to investigate the potential of respiratory acoustic analysis.
+## Dataset Information
 
+Dataset: Respiratory Sound Database
+Source: Kaggle
+Dataset: 920 respiratory recordings from 126 patients
+Access: The dataset can be obtained from the original source.
+Note: Dataset files are not redistributed in this repository.
 
 ## Author
 
