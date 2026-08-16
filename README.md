@@ -323,9 +323,13 @@ The work combines machine learning, deep learning, audio signal processing, and 
 ## Dataset Information
 
 Dataset: Respiratory Sound Database
+
 Source: Kaggle
+
 Dataset: 920 respiratory recordings from 126 patients
+
 Access: The dataset can be obtained from the original source.
+
 Note: Dataset files are not redistributed in this repository.
 
 ## Author
