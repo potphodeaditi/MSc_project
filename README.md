@@ -2,38 +2,59 @@
 
 **MSc Artificial Intelligence Research Project — Nottingham Trent University**
 
+## Overview
+
 This repository contains the research code, experimental work, trained deep learning model, and prototype application developed as part of my MSc Artificial Intelligence research project.
 
-The project investigates the use of **deep learning and respiratory sound analysis** for automated respiratory sound classification and the potential application of acoustic signals for continuous respiratory monitoring.
+The project investigates the use of **deep learning and respiratory sound analysis** for automated respiratory sound classification and explores the potential use of respiratory acoustic signals for continuous monitoring.
+
+The research combines:
+
+- Audio signal processing
+- Machine learning
+- Deep learning
+- Spectrogram-based feature representation
+- CNN and CNN-LSTM architectures
+- Model evaluation
+- Prototype application development
 
 ## Abstract
 
 Respiratory sounds contain acoustic patterns that may provide useful information about respiratory health.
 
-This project investigates whether deep learning techniques can learn meaningful patterns from respiratory audio recordings and use these patterns for automated classification.
+This research investigates whether deep learning models can learn meaningful patterns from respiratory audio recordings and use these patterns for automated respiratory sound classification.
 
-The research focuses on audio preprocessing, feature extraction, deep learning model development, model evaluation, and the implementation of a prototype application for respiratory sound analysis.
+The project focuses on developing an end-to-end workflow covering:
+
+1. Respiratory audio data preparation
+2. Audio preprocessing
+3. Feature extraction
+4. Spectrogram generation
+5. Deep learning model development
+6. Model training
+7. Model evaluation
+8. Prototype application development
 
 Two main deep learning approaches are investigated:
 
-* **Convolutional Neural Networks (CNN)**
-* **CNN-LSTM architectures**
+- **Convolutional Neural Networks (CNN)**
+- **CNN-LSTM architectures**
 
-The project aims to explore the potential of these approaches for respiratory sound classification while considering the challenges associated with real-world respiratory audio data.
-
+The research also considers the challenges associated with respiratory audio data and the potential future application of acoustic analysis for continuous respiratory monitoring.
 
 ## Research Objectives
 
 The main objectives of this research are:
 
 1. To investigate respiratory sound as an acoustic source for respiratory condition classification.
-2. To preprocess and prepare respiratory audio data for machine learning.
+2. To prepare and preprocess respiratory audio recordings for machine learning.
 3. To extract meaningful acoustic representations from respiratory recordings.
 4. To develop deep learning models for respiratory sound classification.
-5. To investigate CNN and CNN-LSTM architectures.
-6. To evaluate model performance using appropriate classification metrics.
-7. To develop a prototype application for respiratory sound prediction.
-8. To investigate the potential use of respiratory acoustic signals for continuous monitoring.
+5. To investigate CNN-based architectures.
+6. To investigate CNN-LSTM architectures for modelling temporal information.
+7. To evaluate model performance using appropriate classification metrics.
+8. To develop a prototype application for respiratory sound prediction.
+9. To explore the potential of respiratory acoustic signals for continuous monitoring.
 
 
 ## Research Methodology
@@ -41,328 +62,361 @@ The main objectives of this research are:
 The overall research workflow is:
 
 Respiratory Sound Data
-        │
-        ▼
+        |
+        v
 Data Preparation
-        │
-        ▼
+        |
+        v
 Data Cleaning
-        │
-        ▼
+        |
+        v
 Audio Preprocessing
-        │
-        ▼
+        |
+        v
 Feature Extraction
-        │
-        ▼
-Audio / Spectrogram Representation
-        │
-        ▼
+        |
+        v
+Spectrogram Representation
+        |
+        v
 Deep Learning Models
-        │
-        ├──────────────┐
-        ▼              ▼
-       CNN         CNN-LSTM
-        │              │
-        └──────┬───────┘
-               ▼
-        Model Training
-               │
-               ▼
-        Model Evaluation
-               │
-               ▼
+        |
+        +----------------+
+        |                |
+        v                v
+       CNN           CNN-LSTM
+        |                |
+        +--------+-------+
+                 |
+                 v
+          Model Training
+                 |
+                 v
+          Model Evaluation
+                 |
+                 v
        Performance Analysis
-               │
-               ▼
+                 |
+                 v
        Prototype Application
+1. Data Preparation
 
-
-### Data Preparation
-
-The project uses respiratory audio recordings together with associated metadata and diagnostic information.
+The research uses respiratory audio recordings together with associated metadata and diagnostic information.
 
 The data preparation process includes:
 
-* Data organisation
-* Data cleaning
-* Metadata processing
-* Label preparation
-* Data quality checking
+Data organisation
+Data cleaning
+Metadata processing
+Label preparation
+Data quality checking
 
-### Audio Processing
+The original dataset is not redistributed in this repository.
 
-Respiratory audio recordings are processed before being used by the deep learning models.
+2. Audio Preprocessing
 
-The project uses Python-based audio processing techniques, including **Librosa**, for working with respiratory sound signals.
+Respiratory audio recordings are processed before being provided to the deep learning models.
 
-The processing workflow includes techniques such as:
+The project uses Python-based audio processing techniques, including Librosa.
 
-* Audio loading
-* Resampling
-* Signal processing
-* Normalisation
-* Segmentation
-* Feature extraction
+The processing workflow includes:
 
-### Feature Representation
+Audio loading
+Resampling
+Signal processing
+Normalisation
+Segmentation
+Feature extraction
+3. Feature Representation
 
-Audio signals are transformed into representations suitable for deep learning.
+The audio recordings are transformed into representations suitable for deep learning.
 
-The project investigates spectrogram-based representations to allow neural networks to learn acoustic patterns from respiratory recordings.
+The project investigates spectrogram-based representations, allowing neural networks to learn acoustic patterns from respiratory recordings.
 
-### Deep Learning Models
+Spectrogram representations are particularly useful for applying image-based deep learning approaches such as CNNs to audio signals.
 
-#### Convolutional Neural Network (CNN)
+Deep Learning Models
+Convolutional Neural Network (CNN)
 
-CNN models are investigated to learn relevant patterns from audio representations such as spectrograms.
+CNN models are investigated to learn spatial and acoustic patterns from spectrogram representations of respiratory sounds.
 
-#### CNN-LSTM
+The CNN approach is used to investigate whether learned acoustic representations can support automated respiratory sound classification.
 
-A CNN-LSTM architecture combines:
+CNN-LSTM
 
-* **CNN layers** for acoustic feature extraction
-* **LSTM layers** for modelling sequential information
+The CNN-LSTM architecture combines:
+
+CNN layers for acoustic feature extraction
+LSTM layers for modelling sequential information
 
 This approach allows both acoustic and temporal characteristics of respiratory sounds to be investigated.
 
+The project also investigates bidirectional recurrent layers and dropout-based regularisation as part of the model development process.
 
-## Model Evaluation
+Hyperparameter Optimisation
 
-The models are evaluated using standard classification metrics.
+The research includes experimentation with hyperparameter optimisation using Keras Tuner.
 
-The evaluation process considers metrics including:
+Hyperparameter experimentation is used to investigate model configurations and identify suitable settings for deep learning model development.
+Model Evaluation
 
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Confusion matrix
+Model performance is evaluated using standard classification metrics, including:
 
-Final performance values will be reported based on the verified experimental results from the research notebook.
+Accuracy
+Precision
+Recall
+F1-score
+Confusion matrix
 
+The final performance results should be interpreted based on the verified experimental results reported in the research notebook.
 
-## Prototype Application
+Experimental performance values are intentionally not listed here until they have been verified from the final research experiments.
+Model Evaluation
 
-The repository includes a Streamlit-based application implemented in `app.py`.
+Model performance is evaluated using standard classification metrics, including:
 
-The application provides a prototype interface for demonstrating respiratory sound analysis using the trained model.
+Accuracy
+Precision
+Recall
+F1-score
+Confusion matrix
 
-The general workflow is:
+The final performance results should be interpreted based on the verified experimental results reported in the research notebook.
 
-
+Experimental performance values are intentionally not listed here until they have been verified from the final research experiments.
 Audio Input
-     │
-     ▼
+     |
+     v
 Audio Processing
-     │
-     ▼
+     |
+     v
 Feature Extraction
-     │
-     ▼
+     |
+     v
 Trained Deep Learning Model
-     │
-     ▼
+     |
+     v
 Prediction
-     │
-     ▼
+     |
+     v
 Result Display
+Dataset
+Respiratory Sound Database
+
+The research uses the Respiratory Sound Database, containing respiratory sound recordings collected from multiple patients together with associated metadata.
+
+The dataset is used for research into respiratory sound classification and machine learning-based analysis.
+
+The dataset is not redistributed in this repository.
+
+Researchers wishing to reproduce the work should obtain the dataset from the authorised original source and follow its licence and usage requirements.
+
+Dataset Source
+
+The dataset is available through Kaggle:
+
+https://www.kaggle.com/datasets/vbookshelf/respiratory-sound-database
+MSc_project/
+|
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── .gitattributes
+|
+├── app/
+|   └── app.py
+|
+├── models/
+|   └── respiratory_cnn_best_tuned.h5
+|
+└── notebooks/
+    └── project.ipynb
+    
+| File                                   | Description                                                                                          |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `notebooks/project.ipynb`              | Main research notebook containing data processing, experimentation, model development and evaluation |
+| `app/app.py`                           | Streamlit prototype application                                                                      |
+| `models/respiratory_cnn_best_tuned.h5` | Trained CNN model                                                                                    |
+| `requirements.txt`                     | Python dependencies used by the project                                                              |
+| `.gitignore`                           | Prevents selected files, including CSV datasets, from being uploaded                                 |
+| `README.md`                            | Project documentation                                                                                |
 
 
-The application is intended for **academic and research demonstration purposes**.
-
-It should not be considered a clinically validated diagnostic system.
-
-
-## Repository Contents
-
-The current repository contains the following main files:
-
-| File                                      | Description                                                                                      |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `project.ipynb`                           | Main research notebook containing data analysis, model development, training and experimentation |
-| `app.py`                                  | Streamlit application for demonstrating the trained model                                        |
-| `respiratory_cnn_best_tuned.h5`           | Trained CNN model                                                                                |
-| `patient_diagnosis.csv`                   | Patient diagnosis dataset                                                                        |
-| `cleaned_patient_diagnosis.csv`           | Processed diagnosis data                                                                         |
-| `ccleaned_patient_diagnosis1.csv`         | Additional processed diagnosis data                                                              |
-| `combined_audio_metadata.csv`             | Combined respiratory audio metadata                                                              |
-| `combined_audio_metadata_with_labels.csv` | Audio metadata with associated labels                                                            |
-| `.gitignore`                              | Git configuration for excluding selected files                                                   |
-| `.gitattributes`                          | Git repository attributes                                                                        |
+| Technology / Library | Purpose                                 |
+| -------------------- | --------------------------------------- |
+| Python               | Research and development                |
+| TensorFlow           | Deep learning                           |
+| Keras                | Neural network development              |
+| PyTorch              | Deep learning and audio experimentation |
+| Torchaudio           | Audio processing                        |
+| Librosa              | Audio signal processing                 |
+| Noisereduce          | Audio noise reduction                   |
+| Pandas               | Data processing                         |
+| NumPy                | Numerical computation                   |
+| Matplotlib           | Data visualisation                      |
+| Seaborn              | Statistical visualisation               |
+| Plotly               | Interactive visualisation               |
+| Streamlit            | Prototype application                   |
+| Keras Tuner          | Hyperparameter optimisation             |
 
 
-## Technologies
-
-The project was developed using the following technologies and libraries:
-
-| Technology   | Purpose                               |
-| ------------ | ------------------------------------- |
-| Python       | Research and development              |
-| TensorFlow   | Deep learning                         |
-| Keras        | Neural network development            |
-| Librosa      | Audio processing                      |
-| Scikit-learn | Machine learning and model evaluation |
-| Pandas       | Data processing                       |
-| NumPy        | Numerical computation                 |
-| Matplotlib   | Data visualisation                    |
-| Streamlit    | Prototype web application             |
-
-
-
-## Getting Started
-
-### Requirements
-
-To run the project, you may need:
-
-* Python 3.x
-* Jupyter Notebook
-* TensorFlow
-* Keras
-* Librosa
-* Scikit-learn
-* Pandas
-* NumPy
-* Matplotlib
-* Streamlit
-
-### Clone the Repository
-
-```bash
+Installation
+1. Clone the repository
 git clone https://github.com/potphodeaditi/MSc_project.git
+
+Move into the project directory:
+
 cd MSc_project
-```
+2. Install dependencies
+pip install -r requirements.txt
 
-### Run the Research Notebook
+For research experiments, a suitable Python environment such as a virtual environment or Conda environment is recommended.
+Running the Research Notebook
 
-Open the project notebook using Jupyter:
+The main research notebook is:
 
-```bash
+notebooks/project.ipynb
+
+It can be opened using Jupyter Notebook, JupyterLab, or another compatible notebook environment.
+
+For example:
+
 jupyter notebook
-```
 
 Then open:
 
-```text
-project.ipynb
-```
+notebooks/project.ipynb
 
-The notebook contains the main research workflow and experimental development.
-
-### Run the Streamlit Application
+The notebook contains the main research workflow, including data processing, experimentation, model development and evaluation.
+Running the Streamlit Application
 
 The prototype application can be launched using:
 
-```bash
-streamlit run app.py
-```
+streamlit run app/app.py
 
-## Reproducibility
+The trained model is located at:
+
+models/respiratory_cnn_best_tuned.h5
+Reproducibility
 
 Reproducibility is an important consideration in this research project.
 
-The repository contains the main research notebook, trained model, data-processing files, and application code used during development.
+This repository provides:
 
-Future improvements to the repository will include more detailed documentation of:
+Research notebook
+Trained model
+Application source code
+Python dependency specification
+Research documentation
 
-* Software versions
-* Data preprocessing
-* Feature extraction
-* Model architecture
-* Hyperparameters
-* Training configuration
-* Evaluation methodology
-* Experimental results
+The original respiratory dataset is not included in the repository.
 
-## Data and Research Ethics
+To reproduce the experiments, researchers should:
 
-This project involves respiratory health-related information and therefore requires careful consideration of data privacy and research ethics.
+Obtain the dataset from the authorised source.
+Install the required Python dependencies.
+Follow the preprocessing workflow described in the research notebook.
+Run the experimental code.
+Evaluate the trained models using the reported evaluation methodology.
+Future improvements to reproducibility documentation may include:
 
-The datasets included in this repository should only be used in accordance with the relevant dataset licence, research permissions, and applicable data governance requirements.
+Exact software versions
+Dataset version information
+Detailed preprocessing parameters
+Feature extraction parameters
+Model architecture specifications
+Hyperparameter configurations
+Training configuration
+Random seeds
+Evaluation methodology
+Experimental results
+Data and Research Ethics
 
-Sensitive or personally identifiable information should not be publicly distributed.
+Respiratory health-related data requires careful consideration of privacy, ethics and responsible research practices.
 
-Where datasets are subject to access restrictions, researchers should obtain the data from the original authorised source and follow its terms of use.
+The original dataset is not redistributed through this repository.
 
+Researchers using the dataset should:
 
-## Limitations
+Obtain the dataset from the authorised source.
+Follow the dataset licence and terms of use.
+Follow applicable research ethics requirements.
+Avoid redistributing sensitive or personally identifiable information.
+Use the data only for permitted research purposes.
+Limitations
 
-This research should be interpreted within the limitations of the available data and experimental setup.
+The research should be interpreted within the limitations of the available data and experimental setup.
 
 Potential limitations include:
 
-* Dataset size and composition
-* Class distribution
-* Variability between respiratory recordings
-* Differences in recording environments and devices
-* Generalisation to unseen populations
-* Differences between research datasets and real-world clinical environments
+Dataset size and composition
+Class distribution
+Variability between respiratory recordings
+Differences in recording environments
+Differences between recording devices
+Generalisation to unseen populations
+Potential dataset bias
+Differences between research datasets and real-world clinical environments
 
-The models developed in this project should therefore be considered **research models and prototypes rather than clinically validated diagnostic systems**.
+The developed models should therefore be considered research models and prototypes rather than clinically validated diagnostic systems.
+Future Work
 
-## Future Work
+Potential future research directions include:
 
-Future research could investigate:
+Evaluation using larger and more diverse respiratory sound datasets
+Independent external validation
+Improved model generalisation
+Investigation of additional acoustic representations
+Alternative deep learning architectures
+Explainable AI methods
+Real-time respiratory sound processing
+Continuous respiratory monitoring
+Robustness testing across recording devices
+Further clinical validation
+Investigation of multimodal respiratory monitoring
 
-* Larger and more diverse respiratory sound datasets
-* Independent external validation
-* Improved model generalisation
-* Additional acoustic feature representations
-* Alternative deep learning architectures
-* Improved real-time processing
-* Explainable AI techniques
-* Continuous respiratory monitoring
-* Further clinical validation
+Academic Context
 
-## Academic Context
+This repository was developed as part of an MSc Artificial Intelligence research project at Nottingham Trent University.
 
-This repository was developed as part of an **MSc Artificial Intelligence research project at Nottingham Trent University**.
+The project combines:
 
-The work combines machine learning, deep learning, audio signal processing, and application development to investigate the potential of respiratory acoustic analysis.
-## Dataset Information
+Artificial intelligence
+Machine learning
+Deep learning
+Audio signal processing
+Respiratory sound analysis
+Spectrogram-based representation
+Time-series modelling
+Application development
 
-Dataset: Respiratory Sound Database
+The research investigates the potential of respiratory acoustic analysis for automated classification and future continuous monitoring applications.
+Author
 
-Source: Kaggle
-
-Dataset: 920 respiratory recordings from 126 patients
-
-Access: The dataset can be obtained from the original source.
-
-Note: Dataset files are not redistributed in this repository.
-
-## Author
-
-**Aditi Potphode**
+Aditi Potphode
 
 MSc Artificial Intelligence
 Nottingham Trent University
 
-GitHub: [@potphodeaditi](https://github.com/potphodeaditi)
+GitHub: https://github.com/potphodeaditi
+Citation
 
-## Citation
+If you use the research materials or code from this repository, please cite:
 
-If you use the code or research materials from this repository, please cite the project as:
-
-```text
 Potphode, A. (2026).
 Deep Learning for Respiratory Sound Classification and Continuous Monitoring.
 MSc Artificial Intelligence Research Project.
 Nottingham Trent University.
-```
+Disclaimer
 
-## Disclaimer
-
-This project has been developed for **academic and research purposes only**.
+This project has been developed for academic and research purposes only.
 
 The predictions produced by the models should not be interpreted as medical advice or a clinical diagnosis and should not replace assessment by a qualified healthcare professional.
 
-## Acknowledgements
+The prototype application has not been clinically validated and should not be used to make medical decisions.
 
-I would like to acknowledge the researchers and organisations responsible for the respiratory sound datasets and open-source software libraries used in this project.
+Acknowledgements
+
+I acknowledge the researchers and organisations responsible for the respiratory sound dataset and the open-source software libraries used in this project.
 
 I also acknowledge the academic supervision and support provided during the MSc research project.
-
-
-**© 2026 Aditi Potphode — MSc Artificial Intelligence Research Project**
