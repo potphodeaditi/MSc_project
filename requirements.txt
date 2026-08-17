@@ -1,0 +1,12 @@
+numpy
+pandas
+tensorflow
+librosa
+matplotlib
+seaborn
+plotly
+streamlit
+keras-tuner
+torch
+torchaudio
+noisereduce
