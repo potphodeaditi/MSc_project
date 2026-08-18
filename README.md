@@ -292,14 +292,14 @@ MSc_project/
 
 
 ##  Installation
-# 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/potphodeaditi/MSc_project.git
 
 Move into the project directory:
 
 cd MSc_project
 
-## 2. Install dependencies
+### 2. Install dependencies
 pip install -r requirements.txt
 
 For research experiments, a suitable Python environment such as a virtual environment or Conda environment is recommended.
