@@ -291,8 +291,8 @@ MSc_project/
 | Keras Tuner          | Hyperparameter optimisation             |
 
 
-## Installation
-1. Clone the repository
+##  Installation
+# 1. Clone the repository
 git clone https://github.com/potphodeaditi/MSc_project.git
 
 Move into the project directory:
@@ -406,6 +406,92 @@ Continuous respiratory monitoring
 Robustness testing across recording devices
 Further clinical validation
 Investigation of multimodal respiratory monitoring
+
+#### Results
+
+The developed models were evaluated on a test set of **1,045 respiratory sound samples** using accuracy, precision, recall, F1-score and class-wise performance.
+
+### Overall Model Performance
+
+| Model | Accuracy | Macro Precision | Macro Recall | Macro F1-score |
+|---|---:|---:|---:|---:|
+| **CNN** | **92.44%** | **51.64%** | **43.76%** | **47.00%** |
+| **LSTM** | **88.33%** | **41.77%** | **24.18%** | **26.00%** |
+
+The CNN achieved the highest overall test accuracy of **92.44%**, compared with **88.33%** for the LSTM model.
+
+However, accuracy alone does not fully represent model performance because the dataset contains substantial class imbalance. Therefore, macro-averaged precision, recall and F1-score are also considered when interpreting the results.
+
+### CNN Results
+
+The final tuned CNN achieved:
+
+- **Test accuracy:** 92.44%
+- **Macro precision:** 51.64%
+- **Macro recall:** 43.76%
+- **Macro F1-score:** 47.00%
+- **Weighted F1-score:** 92.00%
+
+The CNN showed particularly strong performance for the majority COPD class, while performance varied considerably across minority classes.
+
+### LSTM Results
+
+The LSTM model achieved:
+
+- **Test accuracy:** 88.33%
+- **Macro precision:** 41.77%
+- **Macro recall:** 24.18%
+- **Macro F1-score:** 26.00%
+- **Weighted F1-score:** 85.00%
+
+The lower macro-averaged metrics indicate that the LSTM model had difficulty maintaining balanced performance across the different respiratory sound classes.
+
+### Hyperparameter Optimisation
+
+Hyperparameter optimisation was performed using **Keras Tuner**.
+
+The best validation accuracy reported during tuning was approximately:
+
+**90.91%**
+
+The selected hyperparameters included:
+
+| Hyperparameter | Selected Value |
+|---|---:|
+| Filters - Layer 1 | 32 |
+| Filters - Layer 2 | 256 |
+| Dense Units | 256 |
+| Dropout | 0.4 |
+| Learning Rate | 0.0001 |
+
+The final tuned CNN training achieved a validation accuracy of approximately **92.82%** at the end of the reported training process.
+
+### Class-wise Performance
+
+The CNN classification report showed the following performance:
+
+| Class | Precision | Recall | F1-score |
+|---|---:|---:|---:|
+| Class 0 | 0.00 | 0.00 | 0.00 |
+| Class 1 | 0.86 | 0.60 | 0.71 |
+| Class 2 | 0.57 | 0.57 | 0.57 |
+| Class 3 (COPD) | 0.96 | 0.99 | 0.97 |
+| Class 4 | 0.57 | 0.46 | 0.51 |
+| Class 5 | 0.00 | 0.00 | 0.00 |
+| Class 6 | 0.85 | 0.54 | 0.66 |
+| Class 7 | 0.33 | 0.33 | 0.33 |
+
+The results demonstrate strong classification performance for the majority COPD class but substantially lower performance for several minority classes.
+
+### Interpretation
+
+The results suggest that the CNN architecture performed better than the LSTM model on the reported test set.
+
+However, the high overall accuracy is influenced by the strong representation of the COPD class in the test data. The macro-averaged metrics are substantially lower than the overall accuracy, highlighting the difficulty of achieving balanced performance across all respiratory conditions.
+
+This class imbalance is an important limitation of the current experimental setup and should be considered when interpreting the model's generalisation capability.
+
+Further investigation using class-balancing strategies, additional data, external validation and more diverse respiratory sound datasets would be valuable.
 
 ## Academic Context
 
