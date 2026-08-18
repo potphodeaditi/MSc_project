@@ -407,7 +407,7 @@ Robustness testing across recording devices
 Further clinical validation
 Investigation of multimodal respiratory monitoring
 
-#### Results
+## Results
 
 The developed models were evaluated on a test set of **1,045 respiratory sound samples** using accuracy, precision, recall, F1-score and class-wise performance.
 
