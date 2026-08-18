@@ -61,25 +61,32 @@ The main objectives of this research are:
 
 The overall research workflow is:
 
+
 Respiratory Sound Data
         |
         v
 Data Preparation
+
         |
         v
 Data Cleaning
+
         |
         v
 Audio Preprocessing
+
         |
         v
 Feature Extraction
+
         |
         v
 Spectrogram Representation
+
         |
         v
 Deep Learning Models
+
         |
         +----------------+
         |                |
@@ -90,15 +97,19 @@ Deep Learning Models
                  |
                  v
           Model Training
+          
                  |
                  v
           Model Evaluation
+          
                  |
                  v
        Performance Analysis
+       
                  |
                  v
        Prototype Application
+       
        
 ## 1. Data Preparation
 
