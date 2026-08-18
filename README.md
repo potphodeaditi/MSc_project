@@ -113,7 +113,7 @@ Data quality checking
 
 The original dataset is not redistributed in this repository.
 
-2. Audio Preprocessing
+**2. Audio Preprocessing
 
 Respiratory audio recordings are processed before being provided to the deep learning models.
 
@@ -127,7 +127,8 @@ Signal processing
 Normalisation
 Segmentation
 Feature extraction
-3. Feature Representation
+
+** 3. Feature Representation
 
 The audio recordings are transformed into representations suitable for deep learning.
 
@@ -142,7 +143,7 @@ CNN models are investigated to learn spatial and acoustic patterns from spectrog
 
 The CNN approach is used to investigate whether learned acoustic representations can support automated respiratory sound classification.
 
-CNN-LSTM
+** CNN-LSTM
 
 The CNN-LSTM architecture combines:
 
@@ -153,7 +154,7 @@ This approach allows both acoustic and temporal characteristics of respiratory s
 
 The project also investigates bidirectional recurrent layers and dropout-based regularisation as part of the model development process.
 
-Hyperparameter Optimisation
+**Hyperparameter Optimisation
 
 The research includes experimentation with hyperparameter optimisation using Keras Tuner.
 
@@ -200,7 +201,8 @@ Prediction
      |
      v
 Result Display
-Dataset
+
+**Dataset
 Respiratory Sound Database
 
 The research uses the Respiratory Sound Database, containing respiratory sound recordings collected from multiple patients together with associated metadata.
@@ -211,7 +213,7 @@ The dataset is not redistributed in this repository.
 
 Researchers wishing to reproduce the work should obtain the dataset from the authorised original source and follow its licence and usage requirements.
 
-Dataset Source
+** Dataset Source
 
 The dataset is available through Kaggle:
 
@@ -260,14 +262,15 @@ MSc_project/
 | Keras Tuner          | Hyperparameter optimisation             |
 
 
-Installation
+**Installation
 1. Clone the repository
 git clone https://github.com/potphodeaditi/MSc_project.git
 
 Move into the project directory:
 
 cd MSc_project
-2. Install dependencies
+
+**2. Install dependencies
 pip install -r requirements.txt
 
 For research experiments, a suitable Python environment such as a virtual environment or Conda environment is recommended.
@@ -375,7 +378,7 @@ Robustness testing across recording devices
 Further clinical validation
 Investigation of multimodal respiratory monitoring
 
-Academic Context
+**Academic Context
 
 This repository was developed as part of an MSc Artificial Intelligence research project at Nottingham Trent University.
 
@@ -399,7 +402,8 @@ MSc Artificial Intelligence
 Nottingham Trent University
 
 GitHub: https://github.com/potphodeaditi
-Citation
+
+**Citation
 
 If you use the research materials or code from this repository, please cite:
 
@@ -415,7 +419,7 @@ The predictions produced by the models should not be interpreted as medical advi
 
 The prototype application has not been clinically validated and should not be used to make medical decisions.
 
-Acknowledgements
+**Acknowledgements
 
 I acknowledge the researchers and organisations responsible for the respiratory sound dataset and the open-source software libraries used in this project.
 
