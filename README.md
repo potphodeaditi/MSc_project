@@ -66,15 +66,12 @@ Respiratory Sound Data
         |
         v
 Data Preparation
-
         |
         v
 Data Cleaning
-
         |
         v
 Audio Preprocessing
-
         |
         v
 Feature Extraction
@@ -82,11 +79,9 @@ Feature Extraction
         |
         v
 Spectrogram Representation
-
         |
         v
 Deep Learning Models
-
         |
         +----------------+
         |                |
