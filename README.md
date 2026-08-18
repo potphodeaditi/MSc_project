@@ -198,22 +198,29 @@ Confusion matrix
 The final performance results should be interpreted based on the verified experimental results reported in the research notebook.
 
 Experimental performance values are intentionally not listed here until they have been verified from the final research experiments.
+
 Audio Input
+
      |
      v
 Audio Processing
+
      |
      v
 Feature Extraction
+
      |
      v
 Trained Deep Learning Model
+
      |
      v
 Prediction
+
      |
      v
 Result Display
+
 
 ## Dataset
 Respiratory Sound Database
@@ -232,21 +239,28 @@ The dataset is available through Kaggle:
 
 https://www.kaggle.com/datasets/vbookshelf/respiratory-sound-database
 
+
 MSc_project/
+
 |
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 ├── .gitattributes
+
 |
 ├── app/
 |   └── app.py
+
 |
 ├── models/
 |   └── respiratory_cnn_best_tuned.h5
+
 |
 └── notebooks/
     └── project.ipynb
+
+    
     
 | File                                   | Description                                                                                          |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -256,6 +270,7 @@ MSc_project/
 | `requirements.txt`                     | Python dependencies used by the project                                                              |
 | `.gitignore`                           | Prevents selected files, including CSV datasets, from being uploaded                                 |
 | `README.md`                            | Project documentation                                                                                |
+
 
 
 | Technology / Library | Purpose                                 |
