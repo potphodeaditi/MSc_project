@@ -65,20 +65,25 @@ The overall research workflow is:
 Respiratory Sound Data
         |
         v
+        
 Data Preparation
         |
         v
 Data Cleaning
+
         |
         v
 Audio Preprocessing
+
         |
         v
 Feature Extraction
 
+
         |
         v
 Spectrogram Representation
+
         |
         v
 Deep Learning Models
