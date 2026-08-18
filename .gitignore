@@ -2,3 +2,4 @@ archive (1).zip
 archive (1).zip
 *.csv
 notebooks/.ipynb_checkpoints/
+.venv/
