@@ -83,10 +83,12 @@ def preprocess_audio(file_path, sr=16000, n_mels=64, duration=5, fixed_frames=12
 # Load Model & Labels
 
 @st.cache_resource
-def load_model():
-    model_path = r"D:\project\Major Project\respiratory_cnn_best_tuned.h5"
-    return tf.keras.models.load_model(model_path)
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+model_path = BASE_DIR / "models" / "respiratory_cnn_best_tuned.h5"
+
+return tf.keras.models.load_model(model_path)
 cnn_model = load_model()
 df = pd.read_csv(r"D:\project\Major Project\combined_audio_metadata_with_labels.csv")
 class_labels = sorted(df["diagnosis"].unique())
